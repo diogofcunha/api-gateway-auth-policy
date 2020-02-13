@@ -1,6 +1,6 @@
 {
-  "name": "npm-package",
-  "description": "npm-package-template",
+  "name": "api-gateway-auth-policy",
+  "description": "A policy generator for an api gateway authorizer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [

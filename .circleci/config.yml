@@ -40,7 +40,7 @@ jobs:
       - test
       - run:
           name: Publish
-          command: echo release
+          command: npx semantic-release
 
 executors:
   node:
