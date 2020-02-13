@@ -1,0 +1,72 @@
+{
+  "name": "npm-package",
+  "description": "npm-package-template",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
+  "repository": "git@github.com:ThreadsStyling/npm-package-template.git",
+  "author": "Diogo Cunha",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf lib",
+    "postbuild": "rm -rf `find lib -name '__tests__'`",
+    "build": "tsc",
+    "lint": "tslint './src/**/*.{ts,tsx}' -t verbose -p .",
+    "prettier:write": "prettier --ignore-path .gitignore --write './**/*.{md,json,yaml,js,jsx,ts,tsx}'",
+    "prettier:check": "prettier --ignore-path .gitignore --list-different './**/*.{md,json,yaml,js,jsx,ts,tsx}'",
+    "test": "jest",
+    "ci:test": "jest --silent --maxWorkers=2"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@threads/tsconfig": "^1.0.0",
+    "@types/jest": "^24.0.18",
+    "husky": "^3.0.8",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    },
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.test.ts?(x)"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write",
+      "tslint -t verbose -p .",
+      "git add"
+    ],
+    "*.{md,json,yaml,js,jsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
