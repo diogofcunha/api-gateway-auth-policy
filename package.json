@@ -7,7 +7,7 @@
   "files": [
     "lib/"
   ],
-  "repository": "git@github.com:ThreadsStyling/npm-package-template.git",
+  "repository": "git@github.com:diogofcunha/api-gateway-auth-policy.git",
   "author": "Diogo Cunha",
   "license": "MIT",
   "scripts": {
