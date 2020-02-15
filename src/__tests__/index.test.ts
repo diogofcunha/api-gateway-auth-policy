@@ -115,7 +115,7 @@ describe('ApiGatewayAuthPolicy', () => {
     `);
   });
 
-  test('should render as expected when multiple methods are allowed and denied', () => {
+  test('should render as expected when multiple methods are allowed and denied and context is set', () => {
     const apiGatewayAuthPolicy = new ApiGatewayAuthPolicy('12345');
 
     expect(
@@ -124,6 +124,7 @@ describe('ApiGatewayAuthPolicy', () => {
           StringEquals: {'aws:username': 'johndoe'},
         })
         .allowMethod(HttpVerb.PATCH, '/media')
+        .addValueToContext('isSecured', true)
         .allowMethod(HttpVerb.POST, '/media')
         .denyMethod(HttpVerb.DELETE, '/media')
         .denyMethod(HttpVerb.PUT, '/media', {
@@ -131,10 +132,14 @@ describe('ApiGatewayAuthPolicy', () => {
             'aws:SourceIp': ['203.0.113.0/24', '2001:DB8:1234:5678::/64'],
           },
         })
+        .addValueToContext('name', 'diogo')
         .render('*'),
     ).toMatchInlineSnapshot(`
       Object {
-        "context": undefined,
+        "context": Object {
+          "isSecured": true,
+          "name": "diogo",
+        },
         "policyDocument": Object {
           "Statement": Array [
             Object {
