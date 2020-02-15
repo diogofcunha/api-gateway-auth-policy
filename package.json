@@ -69,5 +69,14 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "keywords": [
+    "aws-auth-policy",
+    "lambda",
+    "api-gateway",
+    "aws-policy",
+    "generator",
+    "api-gateway-custom-authorizer",
+    "aws"
+  ]
 }
