@@ -101,7 +101,7 @@ export default class ApiGatewayAuthPolicy {
   }
 
   private getResourceArn(verb: HttpVerb, resource: string) {
-    return `arn:aws:execute-api:${this._config.region}:${this._accountId}:${this._config.apiId}:${this._config.stage}:${verb}:/${resource}`;
+    return `arn:aws:execute-api:${this._config.region}:${this._accountId}:${this._config.apiId}/${this._config.stage}/${verb}/${resource}`;
   }
 
   private addMethod(effect: Effect, verb: HttpVerb, resource: string, condition?: Condition | null): void {

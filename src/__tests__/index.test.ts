@@ -35,7 +35,7 @@ describe('ApiGatewayAuthPolicy', () => {
               },
               "Effect": "Allow",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:PATCH:/media",
+                "arn:aws:execute-api:*:12345:*/*/PATCH/media",
               ],
             },
             Object {
@@ -47,16 +47,16 @@ describe('ApiGatewayAuthPolicy', () => {
               },
               "Effect": "Allow",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:DELETE:/media",
+                "arn:aws:execute-api:*:12345:*/*/DELETE/media",
               ],
             },
             Object {
               "Action": "execute-api:Invoke",
               "Effect": "Allow",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:GET:/media",
-                "arn:aws:execute-api:*:12345:*:*:POST:/media",
-                "arn:aws:execute-api:*:12345:*:*:PUT:/media",
+                "arn:aws:execute-api:*:12345:*/*/GET/media",
+                "arn:aws:execute-api:*:12345:*/*/POST/media",
+                "arn:aws:execute-api:*:12345:*/*/PUT/media",
               ],
             },
           ],
@@ -94,17 +94,17 @@ describe('ApiGatewayAuthPolicy', () => {
               },
               "Effect": "Deny",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:PATCH:/media",
+                "arn:aws:execute-api:*:12345:*/*/PATCH/media",
               ],
             },
             Object {
               "Action": "execute-api:Invoke",
               "Effect": "Deny",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:GET:/media",
-                "arn:aws:execute-api:*:12345:*:*:POST:/media",
-                "arn:aws:execute-api:*:12345:*:*:DELETE:/media",
-                "arn:aws:execute-api:*:12345:*:*:PUT:/media",
+                "arn:aws:execute-api:*:12345:*/*/GET/media",
+                "arn:aws:execute-api:*:12345:*/*/POST/media",
+                "arn:aws:execute-api:*:12345:*/*/DELETE/media",
+                "arn:aws:execute-api:*:12345:*/*/PUT/media",
               ],
             },
           ],
@@ -151,15 +151,15 @@ describe('ApiGatewayAuthPolicy', () => {
               },
               "Effect": "Allow",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:GET:/media",
+                "arn:aws:execute-api:*:12345:*/*/GET/media",
               ],
             },
             Object {
               "Action": "execute-api:Invoke",
               "Effect": "Allow",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:PATCH:/media",
-                "arn:aws:execute-api:*:12345:*:*:POST:/media",
+                "arn:aws:execute-api:*:12345:*/*/PATCH/media",
+                "arn:aws:execute-api:*:12345:*/*/POST/media",
               ],
             },
             Object {
@@ -174,14 +174,14 @@ describe('ApiGatewayAuthPolicy', () => {
               },
               "Effect": "Deny",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:PUT:/media",
+                "arn:aws:execute-api:*:12345:*/*/PUT/media",
               ],
             },
             Object {
               "Action": "execute-api:Invoke",
               "Effect": "Deny",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:DELETE:/media",
+                "arn:aws:execute-api:*:12345:*/*/DELETE/media",
               ],
             },
           ],
@@ -204,7 +204,7 @@ describe('ApiGatewayAuthPolicy', () => {
               "Action": "execute-api:Invoke",
               "Effect": "Allow",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:*:/*",
+                "arn:aws:execute-api:*:12345:*/*/*/*",
               ],
             },
           ],
@@ -227,7 +227,7 @@ describe('ApiGatewayAuthPolicy', () => {
               "Action": "execute-api:Invoke",
               "Effect": "Deny",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:*:/*",
+                "arn:aws:execute-api:*:12345:*/*/*/*",
               ],
             },
           ],
@@ -269,15 +269,15 @@ describe('ApiGatewayAuthPolicy', () => {
               },
               "Effect": "Allow",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:GET:/media",
+                "arn:aws:execute-api:*:12345:*/*/GET/media",
               ],
             },
             Object {
               "Action": "execute-api:Invoke",
               "Effect": "Allow",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:PATCH:/media",
-                "arn:aws:execute-api:*:12345:*:*:POST:/media",
+                "arn:aws:execute-api:*:12345:*/*/PATCH/media",
+                "arn:aws:execute-api:*:12345:*/*/POST/media",
               ],
             },
             Object {
@@ -292,14 +292,14 @@ describe('ApiGatewayAuthPolicy', () => {
               },
               "Effect": "Deny",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:PUT:/media",
+                "arn:aws:execute-api:*:12345:*/*/PUT/media",
               ],
             },
             Object {
               "Action": "execute-api:Invoke",
               "Effect": "Deny",
               "Resource": Array [
-                "arn:aws:execute-api:*:12345:*:*:DELETE:/media",
+                "arn:aws:execute-api:*:12345:*/*/DELETE/media",
               ],
             },
           ],
