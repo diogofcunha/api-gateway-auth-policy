@@ -1,7 +1,6 @@
 # api-gateway-auth-policy
 
 [![CircleCI](https://circleci.com/gh/diogofcunha/api-gateway-auth-policy.svg?style=svg)](https://circleci.com/gh/diogofcunha/api-gateway-auth-policy)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![npm package][npm-badge]][npm]
 
 [npm-badge]: https://img.shields.io/npm/v/api-gateway-auth-policy.png?style=flat-square

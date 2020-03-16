@@ -38,9 +38,6 @@ jobs:
       - setup
       - build
       - test
-      - run:
-          name: Publish
-          command: npx semantic-release
 
 executors:
   node:
@@ -77,4 +74,3 @@ commands:
       - run:
           name: Test
           command: yarn ci:test
-
